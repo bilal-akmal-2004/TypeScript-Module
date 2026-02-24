@@ -49,10 +49,31 @@
 //       oid:1,
 //       items: ["iceCream", "bread"]
 // }
-// 3.Build typsafe utility lib. 
-function getFirstEle(array) {
-    return array[2];
-}
-var numArray = [1, 2, 3, 4];
-var someNum = getFirstEle(numArray);
-console.log(someNum);
+// // 3.Build typsafe utility lib. 
+// function getFirstElement<ElementType>(array: ElementType[]){
+//     return array[0]
+// }
+// const numArray = [1,2,3,4]
+// let firstNum = getFirstElement<number>(numArray)
+// const stringArray = ["sdf","sdf"]
+// let firstString = getFirstElement<string>(stringArray)
+// // 4. define type for the api response 
+// type ApiResponse<Data> = {
+//     data: Data,
+//     isError: boolean,
+// }
+// type UserResponse = ApiResponse<{name: string, age: number}>
+// const  userResponse: UserResponse = {
+//        data: {
+//         name: 'Bilal',
+//         age: 23
+//        },
+//        isError: false,
+//     }
+// type ProductResponse = ApiResponse<{title: string}>
+// const productResponse: ProductResponse = {
+//     data: {
+//     title: "icreaceram"
+//     },
+//     isError: false
+// }
